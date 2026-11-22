@@ -39,7 +39,7 @@ class InventoryPage:
 
     # Obtener nombres
     def obtener_nombres(self):
-        return self.nombres.all_inner_texts()
+        return self.nombres.all_text_contents()
 
     # Obtener precios
     def obtener_precios(self):

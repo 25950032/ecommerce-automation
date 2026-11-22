@@ -1,0 +1,26 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Pytest
+.pytest_cache/
+
+# Allure generated results
+reports/allure-results/
+reports/allure-report/
+
+# Screenshots generated during tests
+reports/screenshots/
+
+# IDE
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db

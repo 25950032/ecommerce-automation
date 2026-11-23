@@ -20,6 +20,10 @@ class CartPage:
         self.page.wait_for_url("**/cart.html")
 
     def contar_productos(self):
+        self.productos_carrito.first.wait_for(
+            state="visible",
+            timeout=10000
+        )
         return self.productos_carrito.count()
 
     def iniciar_checkout(self):

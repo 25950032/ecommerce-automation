@@ -39,8 +39,20 @@ class InventoryPage:
 
     # Obtener nombres
     def obtener_nombres(self):
-        return self.nombres.all_text_contents()
+        self.nombres.first.wait_for(
+            state="visible",
+            timeout=10000
+        )
 
+        cantidad = self.nombres.count()
+
+        nombres = []
+
+        for i in range(cantidad):
+            nombre = self.nombres.nth(i).inner_text()
+            nombres.append(nombre.strip())
+
+        return nombres
     # Obtener precios
     def obtener_precios(self):
         return self.precios.all_inner_texts()
